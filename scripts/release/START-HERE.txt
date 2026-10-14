@@ -1,0 +1,30 @@
+LIBENS IconChanger — Windows x64
+
+한국어
+1. ZIP 파일을 마우스 오른쪽 버튼으로 눌러 "모두 압축 풀기"를 선택하세요.
+2. 압축을 푼 폴더의 essential 폴더를 여세요.
+3. LIBENS IconChanger.exe를 더블 클릭하세요.
+
+별도 설치, .NET 설치, 소스 빌드는 필요하지 않습니다.
+ZIP 안에서 바로 실행하지 말고, 모든 파일을 먼저 압축 해제하세요.
+EXE만 따로 옮기지 마세요. essential 폴더 전체를 함께 보관하세요.
+한국어/영어는 앱 오른쪽 위 KO / EN 메뉴에서 선택할 수 있습니다.
+자세한 사용법: essential/사용방법.md
+
+English
+1. Right-click the ZIP and select "Extract All".
+2. Open the essential folder inside the extracted folder.
+3. Double-click LIBENS IconChanger.exe.
+
+No installer, separate .NET installation, or source build is required.
+Extract all files first; do not run the app from inside the ZIP.
+Keep the entire essential folder together, not just the EXE.
+Choose Korean or English with KO / EN in the app.
+More help: essential/USER-GUIDE.en.md
+
+This app is not code-signed. Windows may display a security warning.
+Only use downloads from https://github.com/LIBENS-Lab/libens-iconchanger/releases
+Do not disable Windows security protections to run it.
+
+Backups and stored icons remain on the PC where changes are applied.
+Keep %LOCALAPPDATA%/FileIconManager and %PROGRAMDATA%/FileIconManager.

@@ -16,7 +16,11 @@ Windows 파일 확장자와 시스템 아이콘을 바꾸고 원래 설정으로
 
 ## 실행
 
-공개된 포터블 배포본을 내려받았다면 전체 압축을 풀고 `essential/LIBENS IconChanger.exe`를 실행하세요. 주변 DLL·리소스·라이선스 고지문을 함께 보관해야 합니다. 자체 포함 배포본은 .NET을 별도 설치할 필요가 없습니다.
+1. [Windows x64 실행 ZIP 다운로드](https://github.com/LIBENS-Lab/libens-iconchanger/releases/download/v1.4.1/LIBENS-IconChanger-1.4.1-win-x64.zip)를 누르거나 [Releases](https://github.com/LIBENS-Lab/libens-iconchanger/releases/latest)에서 ZIP을 내려받으세요.
+2. ZIP을 마우스 오른쪽 버튼으로 눌러 **모두 압축 풀기**를 선택하세요.
+3. 압축을 푼 폴더에서 `essential`을 열고 **LIBENS IconChanger.exe**를 더블 클릭하세요.
+
+별도 설치·.NET 설치·소스 빌드가 필요하지 않습니다. 주변 DLL·리소스·라이선스 고지문이 필요하므로 `essential` 전체를 함께 보관하세요. GitHub의 `Code > Download ZIP`이나 `Source code`는 실행 파일이 없는 개발자용 소스입니다. 코드 서명되지 않은 앱이므로 Windows 보안 경고가 나타날 수 있습니다. 실행을 위해 Windows 보안 기능을 끄지 마세요.
 
 오른쪽 위 `KO / EN` 메뉴로 언어를 바꿉니다. Windows 표시 언어가 한국어이면 한국어로, 그 외에는 영어로 시작합니다. 언어 선택은 실행 단위이며 입력 경로·옵션 값은 유지됩니다.
 

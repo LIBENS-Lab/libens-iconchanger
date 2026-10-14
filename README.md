@@ -11,9 +11,15 @@ A free, MIT-licensed Windows desktop utility for changing file-type and Windows 
 3. Convert images to multi-resolution ICO files, adjust corner rounding and scale shortcut overlays inside a transparent canvas.
 4. Restore original settings from backup history.
 
-## Build and run
+## Download and run (no build required)
 
-For a published portable release, extract the complete download and run `essential/LIBENS IconChanger.exe`. Keep the adjacent DLLs, resources and license notices. No separate .NET installation is needed for a self-contained release.
+1. [Download the Windows x64 ZIP](https://github.com/LIBENS-Lab/libens-iconchanger/releases/download/v1.4.1/LIBENS-IconChanger-1.4.1-win-x64.zip) or visit [Releases](https://github.com/LIBENS-Lab/libens-iconchanger/releases/latest).
+2. Right-click the ZIP and choose **Extract All**.
+3. Open `essential` in the extracted folder and double-click **LIBENS IconChanger.exe**.
+
+No installer, separate .NET installation, or source build is required. Keep the whole `essential` folder together. The GitHub `Code > Download ZIP` and `Source code` downloads contain developer source, not the ready-to-run app. The app is not code-signed; Windows may display a security warning. Do not disable Windows security protections.
+
+## Build from source (developers)
 
 For development, use Windows x64, PowerShell 7 and the .NET 10 SDK. Run from the repository root:
 

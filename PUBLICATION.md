@@ -47,6 +47,20 @@ git add --all
 
 ## 실행 파일 배포
 
+최초 실행 배포는 [v1.4.1 Releases](https://github.com/LIBENS-Lab/libens-iconchanger/releases/tag/v1.4.1)에 게시합니다. 일반 사용자에게는 `LIBENS-IconChanger-1.4.1-win-x64.zip`을 안내하며 자동 생성되는 Source code ZIP과 구분합니다.
+
+저장소 루트에서 재사용 가능한 패키징 명령을 실행합니다. 기존 실행 구성을 덮어쓰지 않고 별도 artifacts 폴더에 빌드·ZIP·SHA256SUMS.txt를 만들며, 출력 파일이 있으면 덮어쓰지 않습니다.
+
+```powershell
+& './scripts/package-release.ps1'
+```
+
+스크립트의 기본 번들 런타임은 10.0.13입니다. 후속 배포 전에는 Microsoft의 안정 보안 패치를 확인하고 `-RuntimeFrameworkVersion`으로 명시적으로 지정하거나 기본값을 갱신합니다. 생성된 ZIP을 별도 폴더에 풀고 아래 복사 실행 검사로 검증한 뒤 업로드하세요.
+
+```powershell
+& './LIBENS IconChanger/checks/check-portable.ps1' -AppDirectory '압축을 푼 폴더/essential'
+```
+
 1. 프로젝트 폴더에서 `build-essential.ps1`로 자체 포함 구성을 빌드합니다.
 2. `checks/check-portable.ps1`로 별도 폴더 복사 실행을 확인합니다.
 3. 완성된 `essential` 전체를 압축해 GitHub Releases에 첨부합니다. LICENSE·THIRD-PARTY-NOTICES.md·licenses 폴더를 포함합니다.

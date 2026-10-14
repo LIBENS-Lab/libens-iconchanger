@@ -1,6 +1,6 @@
 # LIBENS IconChanger
 
-A free icon-management app for Windows 10/11 x64. Launch `LIBENS IconChanger.exe` from a newly built folder. Copy the whole folder when moving it: the EXE needs the adjacent runtime files and assets.
+A free icon-management app for Windows 10/11 x64. Download `LIBENS-IconChanger-1.4.1-win-x64.zip` from GitHub Releases, right-click it and choose **Extract All**, then open `essential` and double-click `LIBENS IconChanger.exe`. Do not launch from inside the ZIP. No installer, separate .NET installation or source build is required. Copy the whole essential folder when moving it: the EXE needs the adjacent runtime files and assets.
 
 ## Language
 

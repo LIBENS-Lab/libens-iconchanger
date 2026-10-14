@@ -5,6 +5,7 @@
 1. Unified project folder, project file and executable names as `LIBENS IconChanger`.
 2. Updated build scripts, shortcut paths and portable checks for paths containing spaces.
 3. Retained earlier backup and stored-icon paths for compatibility.
+4. Published a ready-to-run Windows x64 ZIP with .NET 10.0.13, both user guides and license notices; added direct download links and a bilingual quick-start file.
 
 ## 1.4.0 — 2026-10-14
 

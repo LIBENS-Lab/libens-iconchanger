@@ -1,11 +1,15 @@
-param([string]$OutputDirectory = '')
+param(
+    [string]$OutputDirectory = '',
+    [ValidatePattern('^10\.0\.\d+$')]
+    [string]$RuntimeFrameworkVersion = '10.0.13'
+)
 $ErrorActionPreference = 'Stop'
 $project = Join-Path $PSScriptRoot 'essential\source\LIBENS IconChanger.csproj'
 $destination = if ($OutputDirectory) { [IO.Path]::GetFullPath($OutputDirectory, (Get-Location).ProviderPath) } else { Join-Path $PSScriptRoot 'essential' }
 $staging = Join-Path $PSScriptRoot ('artifacts\essential-build-' + [Guid]::NewGuid().ToString('N'))
 # Publishing into the source's parent causes SDK default globs to exclude the source.
 # Build outside essential, then copy only the completed runtime output into it.
-& dotnet publish $project -c Release -r win-x64 --self-contained true -p:PublishSingleFile=false -p:PublishTrimmed=false -p:DebugType=embedded -o $staging
+& dotnet publish $project -c Release -r win-x64 --self-contained true -p:PublishSingleFile=false -p:PublishTrimmed=false -p:DebugType=embedded "-p:RuntimeFrameworkVersion=$RuntimeFrameworkVersion" -o $staging
 if ($LASTEXITCODE -ne 0) { throw "essential 빌드 실패: $LASTEXITCODE" }
 New-Item -ItemType Directory -Path $destination -Force | Out-Null
 foreach ($outputFile in Get-ChildItem -LiteralPath $staging -Recurse -File) {
