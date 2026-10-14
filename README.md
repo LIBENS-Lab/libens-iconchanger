@@ -8,8 +8,9 @@ A free, MIT-licensed Windows desktop utility for changing file-type and Windows 
 
 1. Change multiple file extensions at once.
 2. Customize default folders, drives, Recycle Bin states and the shared shortcut-arrow overlay.
-3. Convert images to multi-resolution ICO files, adjust corner rounding and scale shortcut overlays inside a transparent canvas.
-4. Restore original settings from backup history.
+3. Use images (`.png`, `.jpg`, `.jpeg`, `.bmp`, `.gif`, `.tif`, `.tiff`, `.webp`, `.svg`) as icons, including large images. The app automatically resizes them to icon sizes and converts them to multi-resolution ICO files. WEBP and SVG require Windows image or thumbnail support.
+4. Adjust corner rounding and scale shortcut overlays inside a transparent canvas.
+5. Restore original settings from backup history.
 
 ## Download and run (no build required)
 
