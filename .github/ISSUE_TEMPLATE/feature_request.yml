@@ -1,0 +1,15 @@
+name: Feature request / 기능 제안
+description: Describe the task you want to make easier.
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or use case / 필요한 작업
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior / 원하는 동작
+    validations:
+      required: true

@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>assets/app.ico</ApplicationIcon>
+    <AssemblyName>LIBENS IconChanger</AssemblyName>
+    <RootNamespace>LibensIconChanger</RootNamespace>
+    <Product>LIBENS IconChanger</Product>
+    <AssemblyTitle>LIBENS IconChanger</AssemblyTitle>
+    <Company>LIBENS</Company>
+    <Description>Windows file type and system icon manager with backup and restore.</Description>
+    <Version>1.4.1</Version>
+    <Authors>LIBENS</Authors>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <NuGetAudit>false</NuGetAudit>
+    <RestoreIgnoreFailedSources>true</RestoreIgnoreFailedSources>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Translations.en.json" LogicalName="LibensIconChanger.Translations.en.json" WithCulture="false" />
+    <Content Include="assets/app.ico" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="assets/app.png" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

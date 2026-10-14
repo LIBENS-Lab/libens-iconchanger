@@ -1,0 +1,54 @@
+name: Windows build and checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        shell: pwsh
+        working-directory: LIBENS IconChanger
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: '10.0.x'
+      - name: Build
+        run: |
+          dotnet build 'essential/source/LIBENS IconChanger.csproj' -c Debug
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Isolated backup and restore checks
+        run: |
+          dotnet run --project checks/CoreChecks/CoreChecks.csproj -- artifacts/ci-core essential/source/assets/app.ico
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Korean and English UI checks
+        run: |
+          foreach ($language in @('ko', 'en')) {
+            & './artifacts/bin/Debug/net10.0-windows/LIBENS IconChanger.exe' --lang $language --ui-check "./artifacts/ci-ui-$language" | Out-Null
+            if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          }
+      - name: Upload check reports
+        if: always()
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: windows-check-reports
+          path: |
+            LIBENS IconChanger/artifacts/ci-core/core-results.json
+            LIBENS IconChanger/artifacts/ci-ui-*/layout-check.json
+          if-no-files-found: warn
+          retention-days: 14

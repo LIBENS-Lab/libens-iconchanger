@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <StartupObject>LibensIconChanger.CoreChecks</StartupObject>
+  </PropertyGroup>
+  <ItemGroup><Compile Include="../../essential/source/*.cs" Link="App/%(Filename)%(Extension)" /></ItemGroup>
+  <ItemGroup><EmbeddedResource Include="../../essential/source/Translations.en.json" LogicalName="LibensIconChanger.Translations.en.json" WithCulture="false" /></ItemGroup>
+</Project>

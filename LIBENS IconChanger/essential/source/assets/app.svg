@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <title>Icon Changer — document with replacement arrows</title>
+  <path fill="#DCE7E1" d="M48 16h84l52 52v128c0 13-11 24-24 24H48c-13 0-24-11-24-24V40c0-13 11-24 24-24Z"/>
+  <path fill="#829B8D" d="M132 16v40c0 7 5 12 12 12h40Z"/>
+  <rect x="96" y="100" width="144" height="144" rx="32" fill="#54D994"/>
+  <path fill="#10271B" d="M122 136h57v-14l31 26-31 26v-14h-57Zm92 68h-57v14l-31-26 31-26v14h57Z"/>
+</svg>

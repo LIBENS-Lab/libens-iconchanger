@@ -1,0 +1,45 @@
+name: Bug report / 버그 신고
+description: Report a reproducible issue without sharing private backup files.
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Remove usernames and private paths from screenshots. Do not attach backups.json or generated icons containing personal information.
+        스크린샷의 사용자명·개인 경로를 가려 주세요. 개인 백업 파일은 첨부하지 마세요.
+  - type: input
+    id: app-version
+    attributes:
+      label: App version / 앱 버전
+      placeholder: 1.4.1
+    validations:
+      required: true
+  - type: input
+    id: windows-version
+    attributes:
+      label: Windows version and build / Windows 버전·빌드
+      placeholder: Windows 11, display scaling 150%
+    validations:
+      required: true
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Target / 대상
+      options:
+        - File extension / 파일 확장자
+        - Folder / 기본 폴더
+        - Shortcut overlay / 바로가기 오버레이
+        - Other Windows icon / 기타 시스템 아이콘
+        - App interface or language / UI·언어
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce / 재현 순서
+      description: Include the selected target, source format, permission level and whether Explorer was refreshed.
+    validations:
+      required: true
+  - type: textarea
+    id: expected-actual
+    attributes:
+      label: Expected and actual result / 예상·실제 결과
+    validations:
+      required: true

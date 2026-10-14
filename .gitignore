@@ -1,0 +1,42 @@
+# Development output and historical builds
+**/artifacts/
+**/bin/
+**/obj/
+**/publish/
+**/archive/
+.vs/
+.idea/
+*.user
+*.suo
+*.lnk
+/LIBENS IconChanger/백업 위치.txt
+
+# Source and help are tracked; locally bundled runtimes are generated.
+/LIBENS IconChanger/essential/*
+!/LIBENS IconChanger/essential/source/
+!/LIBENS IconChanger/essential/사용방법.md
+!/LIBENS IconChanger/essential/USER-GUIDE.en.md
+
+# Local instructions and work records contain machine-specific information.
+/AGENTS.md
+/지시사항*.md
+/LIBENS IconChanger/작업 인계.md
+/LIBENS IconChanger/시스템 아이콘 구현과 검증.md
+.agents/
+.codex/
+.aws/
+
+# User data and signing credentials
+**/generated-icons/
+**/backups.json
+**/backups.json.*
+.env
+.env.*
+!.env.example
+*.pfx
+*.p12
+*.key
+*.log
+*.dmp
+*.zip
+*.7z
